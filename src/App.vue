@@ -4,6 +4,7 @@ import DashboardView from './views/DashboardView.vue';
 import SignupForm from './components/SignupForm.vue'
 import LoginForm from './components/LoginForm.vue'
 import { auth } from './firebase/init.js'
+import {signOut} from 'firebase/auth';
 
 export default {
   components: { SignupForm, LoginForm, DashboardView },
@@ -16,6 +17,13 @@ export default {
   },
   beforeUpdate() {
     if (auth.currentUser) {
+    }
+  },
+  methods:{
+    signOut(){
+      signOut(auth).then(()=>{
+        this.isLoggedIn = false
+      })
     }
   }
 }
@@ -45,5 +53,13 @@ export default {
   <!-- is logged in -->
   <div v-else>
     <DashboardView/>
+  </div>
+  
+  <hr class="footer">
+  
+  <div class="footer">
+    <p>&copy; 2023 nVision Digital | CollaboraPlan</p>
+    <button v-if="isLoggedIn" @click="signOut">Logout</button>
+
   </div>
 </template>

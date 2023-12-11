@@ -20,7 +20,14 @@ body{
 }
 
 .nav-tabs li{
-  border:2px solid #ddd;border-radius:8px;padding:10px;margin:10px;cursor:pointer;transition:all .3s ease
+
+  border:2px solid #ddd;
+  border-radius:8px;
+  padding:10px;
+  margin:10px;
+  cursor:pointer;
+  transition:all .3s ease;
+
 }
 .nav-tabs li:hover{border-color:#007bff
 }
@@ -32,18 +39,26 @@ body{
 }
 
 .filter-wrap{
-  display:flex;gap:20px;font-size:clamp(.5rem,1.5vw,2rem)
+
+  display:flex;
+  gap:20px;
+  font-size:clamp(.5rem,1.5vw,2rem);
+  margin-block: 20px;
+
 }
 
 .filter-wrap select{font-size:.6rem
 }
 
 .task-wrap{
-  margin-top:20px;display:block;width:95%
+  margin-top:20px;
+  display:block;
+  width:95%;
 }
 
 details{
-  cursor:pointer;margin-bottom:10px
+  cursor:pointer;
+  margin-bottom:10px
 }
 
 .summary-wrap{
@@ -62,7 +77,8 @@ details{
 }
 
 .task-detail>summary{
-  cursor:pointer;padding:.5rem 1rem
+  cursor:pointer;
+  padding:.5rem 1rem;
 }
 
 .task-detail[open]{
