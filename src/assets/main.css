@@ -1,0 +1,93 @@
+@import './base.css';
+
+body{
+  display:flex;
+  flex-direction:column;
+  align-items:center
+}
+
+.header-brand{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center
+}
+
+.nav-tabs{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center
+}
+
+.nav-tabs li{
+
+  border:2px solid #ddd;
+  border-radius:8px;
+  padding:10px;
+  margin:10px;
+  cursor:pointer;
+  transition:all .3s ease;
+
+}
+.nav-tabs li:hover{
+  border-color: var(--primary-color)
+}
+
+.text-light{
+  text-decoration:underline;
+  cursor:pointer;
+  color: var(--accent-color)
+}
+
+.filter-wrap{
+
+  display:flex;
+  gap:20px;
+  font-size:clamp(.5rem,1.5vw,2rem);
+  margin-block: 20px;
+
+}
+
+.filter-wrap select{
+  font-size:.6rem
+}
+
+.task-wrap{
+  margin-top:20px;
+  display:block;
+  width:95%;
+}
+
+details{
+  cursor:pointer;
+  margin-bottom:10px
+}
+
+.summary-wrap{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+  align-items:center;
+  flex-wrap:nowrap;column-gap:1.5em;
+  font-size:clamp(.5rem,1.5vw,2rem);
+  border:1px solid var(--secondary-color);
+  /* border:1px solid #fdb; */
+  padding:10px 4px;
+  box-shadow:1px 1px 2px #bbb;
+}
+
+.detail-content{padding:.5rem 1rem
+}
+
+.task-detail>summary{
+  cursor:pointer;
+  padding:.5rem 1rem;
+}
+
+.task-detail[open]{
+  background-color:#ded9d9
+}
+
+.task-detail[open] summary{
+  font-weight:700
+}
