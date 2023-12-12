@@ -67,5 +67,6 @@ hr.rounded{
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    column-gap: 20px;
+    align-items: center;
+    flex-direction: column;
 }
