@@ -14,7 +14,7 @@ export default {
   <hr class="footer">
   <div class="footer">
     <p>&copy; 2023 nVision Digital | <RouterLink to="/">CollaboraPlan</RouterLink> </p>
-    <p><RouterLink to="/about">About Us</RouterLink></p>
+    <p><RouterLink to="/about">About Us</RouterLink> - <RouterLink to="/legal">Legal</RouterLink></p>
   </div>
 
 </template>
