@@ -1,6 +1,8 @@
-<script>
+<script setup>
 
 import { RouterLink, RouterView } from 'vue-router'
+
+
 
 </script>
 
@@ -15,7 +17,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink>Terms and Conditions</RouterLink>
     </li>
 
-    <RouterView></RouterView>
+    <RouterView/>
 
 </template>
 
