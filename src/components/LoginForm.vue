@@ -15,9 +15,9 @@
         <button type="submit">Log in</button>
 
     </form>
-  </template>
+</template>
   
-  <script>
+<script>
   import { signInWithEmailAndPassword } from 'firebase/auth'
   import { auth } from '../firebase/init.js'
   
@@ -44,4 +44,4 @@
 
     }
   }
-  </script>
+</script>

@@ -13,21 +13,21 @@
 
 <template>
 
-<Transition name="modal-fade">
-    <div v-show="isModalVisible" class="modal-wrap" id="item-modal">
-        <div class="modal-content">
-            <header class="modal-header" id="modal-title">
-                <slot name="header">
-                    Hi User
-                </slot>
-                <button type="button" @click="close">Close &cross;</button>
-            </header>
-            <section class="modal-body" id="modal-details">
-                <slot name="body">Add something here</slot>
-            </section>
+    <Transition name="modal-fade">
+        <div v-show="isModalVisible" class="modal-wrap" id="item-modal">
+            <div class="modal-content">
+                <header class="modal-header" id="modal-title">
+                    <slot name="header">
+                        Hi User
+                    </slot>
+                    <button type="button" @click="close">Close &cross;</button>
+                </header>
+                <section class="modal-body" id="modal-details">
+                    <slot name="body">Add something here</slot>
+                </section>
+            </div>
         </div>
-    </div>
-</Transition>
+    </Transition>
 
 </template>
 

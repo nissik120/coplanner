@@ -1,7 +1,8 @@
 <script>
 
-import ModalForm from '../components/ModalForm'
+
 import AdminAssignForm from '../components/AdminAssignForm.vue'
+import ModalForm from '../components/ModalForm.vue'
 import {executeGroupSortData} from "../essentials/index.js"
 import {db} from "../firebase/init.js"
 import {collection, doc, getDoc, getDocs, addDoc, updateDoc, deleteDoc} from "firebase/firestore"
