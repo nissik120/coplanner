@@ -1,7 +1,8 @@
 <script>
 
-import ModalForm from '../components/ModalForm.vue'
-import {executeGroupSortData} from "../functions/index.js"
+import ModalForm from '../components/ModalForm'
+import AdminAssignForm from '../components/AdminAssignForm.vue'
+import {executeGroupSortData} from "../essentials/index.js"
 import {db} from "../firebase/init.js"
 import {collection, doc, getDoc, getDocs, addDoc, updateDoc, deleteDoc} from "firebase/firestore"
 
@@ -9,6 +10,7 @@ import {collection, doc, getDoc, getDocs, addDoc, updateDoc, deleteDoc} from "fi
 export default{
   components:{
     ModalForm,
+    AdminAssignForm
   },
   created(){
     this.getTasks().then((newTasks)=>{
@@ -154,10 +156,12 @@ export default{
 
   <div>
 
+    <AdminAssignForm/>
+
     <h1>Targets</h1>
     <p>Find your submission and test dates here!</p>
 
-    <button type="button" class="fab" id="add-btn" @click="showModal">ADD &plus;</button>
+    <button type="button" class="fab" id="add-btn" @click.prevent="showModal">ADD &plus;</button>
 
     <div class="filter-wrap">
 
@@ -170,7 +174,7 @@ export default{
                 <option value="4">Course (desc)</option>
                 <option value="5">Type (desc)</option>
             </select>
-        </label>    
+        </label>
 
         <label>Sort By: 
             <select name="sort-by" id="sort-by" v-model="selectedSortID" @change="loadView">

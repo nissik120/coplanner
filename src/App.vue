@@ -1,12 +1,14 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 import HomeView from './views/HomeView.vue'
+import { mapGetters, mapActions, mapMutations } from 'vuex'
 
 export default {
   methods:{
-    increment(){
-      this.$store.commit('increment', 2)
-    }
+    ...mapActions('guestCounterModule', ['increment'])
+  },
+  computed:{
+    ...mapGetters('guestCounterModule', ['getCounter'])
   }
 }
 
@@ -21,8 +23,8 @@ export default {
     <p><RouterLink to="/about">About Us</RouterLink> - <RouterLink to="/legal">Legal</RouterLink></p>
   </div>
 
-  <p>Guest Count: {{ $store.state.guestCount }}</p>
-  <button @click="increment">Add Guest</button>
+  <p>Guest Count: {{ getCounter }}</p>
+  <button @click.prevent="increment(1)">Add Guest</button>
 
 </template>
 

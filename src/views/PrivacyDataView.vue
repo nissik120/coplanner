@@ -1,8 +1,10 @@
-<script setup>
+<script>
 
 import { RouterLink, RouterView } from 'vue-router'
 
+export default{
 
+}
 
 </script>
 
@@ -12,12 +14,12 @@ import { RouterLink, RouterView } from 'vue-router'
     <h1>All Things Legal</h1>
 
     <li>
-        <RouterLink>Data Security</RouterLink>
-        <RouterLink>Privacy Policy</RouterLink>
-        <RouterLink>Terms and Conditions</RouterLink>
+        <ul>Data Security</ul>
+        <ul>Privacy Policy</ul>
+        <ul>Terms and Conditions</ul>
     </li>
 
-    <RouterView/>
+    <!-- <RouterView/> -->
 
 </template>
 

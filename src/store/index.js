@@ -1,21 +1,12 @@
 import {createStore } from 'vuex'
+import authModule from './modules/authModule/index.js'
+import counterModule from './modules/counterModule/index.js'
 
 
 const store = createStore({
-    state(){
-        return {
-            guestCount: 0
-        }
-    },
-    mutations:{    
-        increment(state, payload){
-            state.guestCount = state.guestCount+payload
-        }
-    },
-    getters:{
-        getCounter(state){
-            return state.guestCount
-        }
+    modules: {
+        guestCounterModule: counterModule,
+        authModule: authModule
     }
 })
 

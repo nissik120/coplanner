@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="login">
+    <form @submit.prevent="logIn">
     <h2>Log in</h2>
 
         <div class="form-group">      
@@ -12,7 +12,7 @@
             <input type="password" placeholder="At least 6 chars" required v-model="password">
         </div>
 
-        <button>Log in</button>
+        <button type="submit">Log in</button>
 
     </form>
   </template>
@@ -30,7 +30,7 @@
       }
     },
     methods: {
-      login() {
+      logIn() {
         // login user
         signInWithEmailAndPassword(auth,this.email,this.password)
         .then(() => {
@@ -38,7 +38,10 @@
           console.log("Success")
           this.$emit('loggedIn')
         })
+
+
       }
+
     }
   }
   </script>
