@@ -1,6 +1,5 @@
 <script>
 
-
 import AdminAssignForm from '../components/AdminAssignForm.vue'
 import ModalForm from '../components/ModalForm.vue'
 import {executeGroupSortData} from "../essentials/index.js"
@@ -146,7 +145,7 @@ export default{
       let toBeDeletedID = event.target.getAttribute("data-link")
       console.log(toBeDeletedID)
       await deleteDoc(doc(db, "tasks", toBeDeletedID))
-      this.loadView()      
+      this.loadView()     
     }
   }
 }

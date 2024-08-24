@@ -1,4 +1,5 @@
-import {auth} from "../../../firebase/init.js"
+import {auth} from '../../../firebase/init.js'
+import { signInWithEmailAndPassword } from 'firebase/auth'
 
 const authModule = {
 

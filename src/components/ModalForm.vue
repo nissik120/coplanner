@@ -10,7 +10,6 @@
 
 </script>
 
-
 <template>
 
     <Transition name="modal-fade">

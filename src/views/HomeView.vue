@@ -41,13 +41,13 @@ export default {
     <!-- login -->
     <template v-if="showLogin">
       <LoginForm @loggedIn="isLoggedIn = true"/>
-      <p>No account yet? <span @click="showLogin=false">Sign up</span> instead.</p>
+      <p>No account yet? <span class="intext-link" @click="showLogin=false">Sign up</span> instead.</p>
     </template>
     <!-- or register -->
     <template v-else>
       <!-- listen for event -->
       <SignupForm @loggedIn="isLoggedIn = true"/>
-      <p>Already registered? <span @click="showLogin=true">Login</span> instead.</p>
+      <p>Already registered? <span class="intext-link" @click="showLogin=true">Login</span> instead.</p>
     </template>
   </div>
   <!-- is logged in -->
@@ -59,3 +59,12 @@ export default {
     
   </div>
 </template>
+
+<style>
+
+.intext-link{
+  color: var(--link-color);
+}
+
+
+</style>

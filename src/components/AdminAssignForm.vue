@@ -4,8 +4,8 @@
 
         <h1>Elevate User</h1>
         <div class="form-group">
-            <label for="admin-email">Candidate Email</label>
-            <input type="text" name="admin-email" id="admin-email" v-model="admin_email">
+            <label for="email">Candidate Email</label>
+            <input type="email" name="email" id="email" required v-model="email">
         </div>
         <button type="submit">Process Request</button>    
     
@@ -15,24 +15,24 @@
 
 <script>
 
-import functions from "../firebase/init.js"
-import httpsCallable from "firebase/functions"
+import { getFunctions, httpsCallable } from "firebase/functions"
 
 export default {
     data(){
         return{
-            admin_email: ""
+            email: ''
         }
     },
     methods:{
         executeAdminElevate(){
-            const adminEmail = this.admin_email
+            //const adminEmail = this.email
+            //console.log(typeof(adminEmail))
+
+            const functions = getFunctions();
             const addAdminRole = httpsCallable(functions, 'addAdminRole')
-            addAdminRole({ email: adminEmail }).then(res=>{
+            addAdminRole({ email: this.email }).then(res=>{
                 console.log(res)
             })
-
-
         }
     }
 }
